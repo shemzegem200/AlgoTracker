@@ -1,0 +1,58 @@
+form{
+    background-color: rgb(234, 234, 234);
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+form input{
+    all: unset;
+    font: 15px system-ui;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+}
+
+.top-text-instr{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.search-container{
+    margin-bottom: 20px;
+}
+
+.solve-board-button{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #EE82EE;
+    padding: 0 10px;
+    display: flex; /* Use flexbox */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.solve-board-button[disabled]:hover {
+    cursor: not-allowed;
+}
+
+.light-blue-cell {
+    /* background-color: lightblue; */
+    background-color: #b0f8ff;
+}
+
+.yellow-cell{
+    /* background-color: #F0E68C; */
+    background-color: #ffe75d;
+}

@@ -1,0 +1,135 @@
+.index-contents{
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 15px; */
+}
+.header-text {
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInAndOut 10s ease infinite;
+}
+
+@keyframes fadeInAndOut {
+    0% {
+        opacity: 0; /* Start from opacity 0 */
+        transform: translateY(-10px); /* Move text up slightly */
+    }
+    5.88% {
+        opacity: 1; /* Fade in for 1 second (5.88% of 17s) */
+        transform: translateY(0); /* Move text back to its original position */
+    }
+    82.35% {
+        opacity: 1; /* Stay visible for 15 seconds (82.35% of 17s) */
+    }
+    88.23% {
+        opacity: 0; /* Fade out for 1 second (88.23% of 17s) */
+        transform: translateY(10px); /* Move text down slightly */
+    }
+    100% {
+        opacity: 0; /* Ensure opacity is 0 at the end */
+    }
+}
+
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.open-board, .create-board {
+    flex: 1;
+    border: 1px solid #2222;
+    padding: 20px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.21s; /* Add transition effect */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.open-board:hover, .create-board:hover {
+    background-color: #eee; /* Lighter background color on hover */
+}
+
+
+.texts {
+    color: #333;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.img-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.35;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+.img-open {
+    padding: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+.img-create {
+    padding-left: 10px;
+    max-width: 59%;
+    max-height: 59%;
+}
+
+
+
+/*--------------------- to display additional messages when hovering over the buttons */
+.message {
+    color: #777;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.open-board:hover .message, .create-board:hover .message {
+    opacity: 1;
+}
+
+
+/* Additional styles for mobile view */
+@media screen and (max-width: 600px) {
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 0; /* Remove horizontal margin */
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .open-board, .create-board {
+        width: 100%; /* Set buttons to full width */
+        margin-bottom: 10px; /* Add space between buttons */
+        height: 80px; /* Set smaller height for buttons */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .message{
+        display: none;
+    }
+}
